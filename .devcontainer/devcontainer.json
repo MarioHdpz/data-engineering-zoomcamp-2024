@@ -1,28 +1,15 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.177.0/containers/go
+// For format details, see https://aka.ms/devcontainer.json.
 {
-	"name": "data-engineering",
+	"name": "data-engineering-2024",
 	"build": {
-		"dockerfile": "Dockerfile",
-		"args": {
-			"TZ": "UTC"
-		}
+		"dockerfile": "Dockerfile"
 	},
-	"runArgs": [
-		"--cap-add=SYS_PTRACE",
-		"--security-opt",
-		"seccomp=unconfined"
-	],
 	"features": {
 		"ghcr.io/devcontainers/features/python:1": {
 			"version": "3.12"
 		},
-		"ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {},
-		"ghcr.io/devcontainers-contrib/features/terraform:1": {},
-		"ghcr.io/devcontainers-contrib/features/yamllint:2": {},
+		"ghcr.io/devcontainers/features/terraform:1": {},
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
-		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
-		"ghcr.io/devcontainers/features/github-cli:1": {},
 		"ghcr.io/devcontainers-contrib/features/spark-sdkman:2": {
 			"jdkVersion": "11"
 		},
@@ -30,17 +17,14 @@
 			"version": "latest"
 		}
 	},
-	// Set *default* container specific settings.json values on container create.
 	"customizations": {
 		"vscode": {
 			"settings": {},
-			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"editorconfig.editorconfig",
 				"ms-python.python",
 				"ms-python.vscode-pylance",
-				"ms-toolsai.jupyter",
-				"GitHub.github-vscode-theme"
+				"ms-toolsai.jupyter"
 			]
 		}
 	},
